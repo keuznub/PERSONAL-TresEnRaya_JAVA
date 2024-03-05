@@ -11,6 +11,7 @@ import java.awt.Font;
 /**
  *
  * @author breix
+ * Class to change fonts to Serif Sans indicating just the size
  */
 public class ChangeFonts {
     

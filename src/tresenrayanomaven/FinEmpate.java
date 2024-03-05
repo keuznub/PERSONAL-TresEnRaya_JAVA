@@ -104,9 +104,6 @@ public class FinEmpate extends javax.swing.JDialog {
        
     }//GEN-LAST:event_btnSalirActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

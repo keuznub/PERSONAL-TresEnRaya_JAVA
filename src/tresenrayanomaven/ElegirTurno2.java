@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 /**
  *
  * @author breix
+ * ElegirTurno 2 window
  */
 public class ElegirTurno2 extends javax.swing.JDialog {
     private JuegoNuevo ventanaJuego;
@@ -126,9 +127,6 @@ public class ElegirTurno2 extends javax.swing.JDialog {
         
     }//GEN-LAST:event_btnU1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
