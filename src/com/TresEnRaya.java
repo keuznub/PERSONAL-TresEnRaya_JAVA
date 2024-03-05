@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package tresenrayanomaven;
+package com;
 
 import com.jtattoo.plaf.JTattooUtilities;
 import javax.swing.UIClientPropertyKey;

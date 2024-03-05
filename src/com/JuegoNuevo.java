@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package tresenrayanomaven;
+package com;
 
 import java.awt.Component;
 import java.awt.Container;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import static tresenrayanomaven.ChangeFonts.changeFont;
+import static com.ChangeFonts.changeFont;
 
 /**
  *
@@ -69,7 +69,6 @@ public class JuegoNuevo extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 350, 500));
-        setMaximumSize(new java.awt.Dimension(800, 800));
         setMinimumSize(new java.awt.Dimension(500, 500));
 
         jPanel1.setMaximumSize(new java.awt.Dimension(800, 800));

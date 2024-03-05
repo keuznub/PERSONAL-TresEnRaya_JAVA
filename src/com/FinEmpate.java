@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package tresenrayanomaven;
+package com;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -15,27 +15,23 @@ import javax.swing.JPanel;
 /**
  *
  * @author breix
- * Fin de juego Window
  */
-public class FinDeJuego extends javax.swing.JDialog {
+public class FinEmpate extends javax.swing.JDialog {
 
     private String usuario;
-    private ImageIcon background = new ImageIcon("Victoria.gif");
+    private ImageIcon background = new ImageIcon("empate.gif");
     private JuegoNuevo ventanaJuego;
     /**
      * Creates new form FinDeJuego
      */
-    public FinDeJuego(java.awt.Frame parent, boolean modal,JuegoNuevo ventanaJuego) {
+    public FinEmpate(java.awt.Frame parent, boolean modal,JuegoNuevo ventanaJuego) {
         super(parent, modal);
         this.ventanaJuego = ventanaJuego;
         usuario = ventanaJuego.getPartidas().get(ventanaJuego.getContadorPartidas()).getGanador();
         initComponents();
         lblbackground.setIcon(new ImageIcon(background.getImage().getScaledInstance(lblbackground.getWidth(),lblbackground.getHeight(),Image.SCALE_DEFAULT)));
-        ChangeFonts.changeFont(lblFelicitacion, 28);
-        ChangeFonts.changeFont(lblGanaste, 24);
-        lblGanaste.setForeground(Color.GREEN);
-        lblFelicitacion.setText("Felicidades " + usuario);
-        lblFelicitacion.setForeground(Color.GREEN);
+        ChangeFonts.changeFont(lblEmpate, 28);
+        lblEmpate.setForeground(Color.GREEN);
         this.setLocationRelativeTo(null);
     }
 
@@ -51,8 +47,7 @@ public class FinDeJuego extends javax.swing.JDialog {
         jPanelFinDelJuego = new javax.swing.JPanel();
         btnNuevaPartida = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        lblFelicitacion = new javax.swing.JLabel();
-        lblGanaste = new javax.swing.JLabel();
+        lblEmpate = new javax.swing.JLabel();
         lblbackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -66,7 +61,7 @@ public class FinDeJuego extends javax.swing.JDialog {
                 btnNuevaPartidaActionPerformed(evt);
             }
         });
-        jPanelFinDelJuego.add(btnNuevaPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(206, 160, 140, -1));
+        jPanelFinDelJuego.add(btnNuevaPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 140, -1));
 
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -74,14 +69,11 @@ public class FinDeJuego extends javax.swing.JDialog {
                 btnSalirActionPerformed(evt);
             }
         });
-        jPanelFinDelJuego.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 188, 90, -1));
+        jPanelFinDelJuego.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 140, -1));
 
-        lblFelicitacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFelicitacion.setText("Felicidades");
-        jPanelFinDelJuego.add(lblFelicitacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 355, -1));
-
-        lblGanaste.setText("Ganaste!");
-        jPanelFinDelJuego.add(lblGanaste, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 146, 170, 30));
+        lblEmpate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblEmpate.setText("Es un Empate!!");
+        jPanelFinDelJuego.add(lblEmpate, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 355, -1));
 
         lblbackground.setBackground(new java.awt.Color(255, 255, 255));
         jPanelFinDelJuego.add(lblbackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, 0, 360, 220));
@@ -102,7 +94,7 @@ public class FinDeJuego extends javax.swing.JDialog {
 
     private void btnNuevaPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaPartidaActionPerformed
         this.dispose();
-        ventanaJuego.elegirTurnoOut();
+        ventanaJuego.elegirTurno2out();
        
     }//GEN-LAST:event_btnNuevaPartidaActionPerformed
 
@@ -112,13 +104,13 @@ public class FinDeJuego extends javax.swing.JDialog {
        
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNuevaPartida;
     private javax.swing.JButton btnSalir;
     private javax.swing.JPanel jPanelFinDelJuego;
-    private javax.swing.JLabel lblFelicitacion;
-    private javax.swing.JLabel lblGanaste;
+    private javax.swing.JLabel lblEmpate;
     private javax.swing.JLabel lblbackground;
     // End of variables declaration//GEN-END:variables
     

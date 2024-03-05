@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package tresenrayanomaven;
+package com;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -15,9 +15,9 @@ import javax.swing.JPanel;
 /**
  *
  * @author breix
- * elegirturno Window
+ * ElegirTurno 2 window
  */
-public class ElegirTurno extends javax.swing.JDialog {
+public class ElegirTurno2 extends javax.swing.JDialog {
     private JuegoNuevo ventanaJuego;
     private String usuario1;
     private String usuario2;
@@ -26,7 +26,7 @@ public class ElegirTurno extends javax.swing.JDialog {
     /**
      * Creates new form FinDeJuego
      */
-    public ElegirTurno(java.awt.Frame parent, boolean modal,JuegoNuevo ventanaJuego) {
+    public ElegirTurno2(java.awt.Frame parent, boolean modal,JuegoNuevo ventanaJuego) {
         super(parent, modal);
         this.ventanaJuego = ventanaJuego;
         if(ventanaJuego.getUsuario1().equals(ventanaJuego.getPartidas().get(ventanaJuego.getContadorPartidas()).getGanador())){
@@ -43,8 +43,9 @@ public class ElegirTurno extends javax.swing.JDialog {
         this.setLocationRelativeTo(null);
         //lblbackground.setIcon(new ImageIcon(background.getImage().getScaledInstance(lblbackground.getWidth(),lblbackground.getHeight(),Image.SCALE_DEFAULT)));
         ChangeFonts.changeFont(lblElegirTurno, 16);
-        lblElegirTurno.setText("<HTML>Elige con qué quieres jugar la nueva partida <BR>"
-                + usuario1 + "</HTML>");
+        lblElegirTurno.setText("Quien empezará la siguiente partida?");
+        btnU1.setText(usuario1);
+        btnU2.setText(usuario2);
         
        
     }
@@ -59,9 +60,9 @@ public class ElegirTurno extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanelFinDelJuego = new javax.swing.JPanel();
-        btnConO = new javax.swing.JButton();
+        btnU2 = new javax.swing.JButton();
         lblElegirTurno = new javax.swing.JLabel();
-        btnConX = new javax.swing.JButton();
+        btnU1 = new javax.swing.JButton();
         lblbackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -69,25 +70,23 @@ public class ElegirTurno extends javax.swing.JDialog {
 
         jPanelFinDelJuego.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnConO.setText("Con O");
-        btnConO.addActionListener(new java.awt.event.ActionListener() {
+        btnU2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConOActionPerformed(evt);
+                btnU2ActionPerformed(evt);
             }
         });
-        jPanelFinDelJuego.add(btnConO, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 140, -1));
+        jPanelFinDelJuego.add(btnU2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 140, -1));
 
         lblElegirTurno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblElegirTurno.setText("Elige con qué quieres jugar");
         jPanelFinDelJuego.add(lblElegirTurno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 355, -1));
 
-        btnConX.setText("Con X");
-        btnConX.addActionListener(new java.awt.event.ActionListener() {
+        btnU1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConXActionPerformed(evt);
+                btnU1ActionPerformed(evt);
             }
         });
-        jPanelFinDelJuego.add(btnConX, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 140, -1));
+        jPanelFinDelJuego.add(btnU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 140, -1));
 
         lblbackground.setBackground(new java.awt.Color(255, 255, 255));
         jPanelFinDelJuego.add(lblbackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, 0, 360, 220));
@@ -106,7 +105,7 @@ public class ElegirTurno extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnConOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConOActionPerformed
+    private void btnU2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnU2ActionPerformed
         this.dispose();
         System.out.println("Elegir turno usuario1:" + usuario1);
         System.out.println("Elegir turno usuario2:" + usuario2);
@@ -115,9 +114,9 @@ public class ElegirTurno extends javax.swing.JDialog {
         ventanaJuego.setContadorPartidas();
         ventanaJuego.nuevoJuegoOut();
         
-    }//GEN-LAST:event_btnConOActionPerformed
+    }//GEN-LAST:event_btnU2ActionPerformed
 
-    private void btnConXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConXActionPerformed
+    private void btnU1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnU1ActionPerformed
         this.dispose();
         System.out.println("Elegir turno usuario1:" + usuario1);
         System.out.println("Elegir turno usuario2:" + usuario2);
@@ -126,12 +125,13 @@ public class ElegirTurno extends javax.swing.JDialog {
         ventanaJuego.setContadorPartidas();
         ventanaJuego.nuevoJuegoOut();
         
-    }//GEN-LAST:event_btnConXActionPerformed
+    }//GEN-LAST:event_btnU1ActionPerformed
 
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnConO;
-    private javax.swing.JButton btnConX;
+    private javax.swing.JButton btnU1;
+    private javax.swing.JButton btnU2;
     private javax.swing.JPanel jPanelFinDelJuego;
     private javax.swing.JLabel lblElegirTurno;
     private javax.swing.JLabel lblbackground;
